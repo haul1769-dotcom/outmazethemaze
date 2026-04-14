@@ -1,31 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-  void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "walls")
+        if (other.CompareTag("walls"))
         {
-          print("ENTER") ;   
-           }
+            Debug.Log("ENTER");
+        }
     }
 
-void onTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "walls")
+        if (other.CompareTag("walls"))
         {
-         print("STAY") ;   
-           }
+            Debug.Log("STAY");
+        }
     }
 
-void onTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "walls")
+        if (other.CompareTag("walls"))
         {
-            print("EXIT") ;   
-           }
+            Debug.Log("EXIT");
+        }
     }
-
 }
+
